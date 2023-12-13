@@ -49,7 +49,7 @@ class TaskApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
+        kwargs['_return_http_data_only'] = False
         if kwargs.get('async_req'):
             return self.create_task_with_http_info(body, x_ebay_c_marketplace_id, content_type, **kwargs)  # noqa: E501
         else:

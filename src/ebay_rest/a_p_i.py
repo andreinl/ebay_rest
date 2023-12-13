@@ -858,7 +858,7 @@ class API(metaclass=Multiton):
         :return obj (collections)
         """
         basic_types = (bool, bytes, datetime.date, datetime.datetime,
-                       float, int, type(None), str)  # omitted ones that are unlikely to ever be used
+                       float, int, type(None), str, tuple)  # omitted ones that are unlikely to ever be used
 
         if type(obj) in basic_types:  # leaf node
             return obj
