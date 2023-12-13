@@ -600,6 +600,7 @@ class TaskApi(object):
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
+        all_params.append('file')
 
         params = locals()
         for key, val in six.iteritems(params['kwargs']):
@@ -649,6 +650,8 @@ class TaskApi(object):
             form_params.append(('size', params['size']))  # noqa: E501
         if 'type' in params:
             form_params.append(('type', params['type']))  # noqa: E501
+        if 'file' in params:
+            form_params.append(('file', params['file']))  # noqa: E501
 
         body_params = None
         # HTTP header `Accept`
